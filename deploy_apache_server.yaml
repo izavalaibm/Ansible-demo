@@ -1,0 +1,13 @@
+---
+- host: vsphere
+  become: yes
+  tasks:
+    - name: Download Web Page
+          shell: "curl -kLo "
+    - name: Download Apache
+        yum:
+          name: httpd
+          state: latest
+    - name: Enable Apache
+        httpd:
+          state: enabled
