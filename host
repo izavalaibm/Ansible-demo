@@ -1,2 +1,2 @@
 [vsphere]
-ibmjump ansible_host= ansible_user= ansible_ssh_pass=
+ibmjump ansible_host=172.18.1.66 ansible_user=root ansible_ssh_pass=Passw0rd!
