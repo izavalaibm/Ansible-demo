@@ -14,7 +14,8 @@
         state: latest
 
     - name: "Enable Apache"
-      httpd:
+      service:
+        name: httpd
         state: enabled
 
     - name: "Download Web Page"
