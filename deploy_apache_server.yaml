@@ -16,7 +16,7 @@
     - name: "Enable Apache"
       service:
         name: httpd
-        state: enabled
+        state: started
 
     - name: "Download Web Page"
       shell: "ln -s ibm_page /var/www/html/"
