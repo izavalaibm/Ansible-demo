@@ -2,12 +2,6 @@
 - hosts: all
   tasks:
 
-    - name: "Download Web Page"
-      shell: "curl -aL https://raw.githubusercontent.com/izavalaibm/Ansible-demo/main/IBM_Page.html -o ibm_page"
-
-    - name: "Download Web Page"
-      shell: "chmod 777 ibm_page"
-
     - name: "Download Apache"
       yum:
         name: httpd
@@ -19,7 +13,8 @@
         state: started
 
     - name: "Download Web Page"
-      shell: "ln -s ibm_page /var/www/html/"
+      shell: "curl -aL https://raw.githubusercontent.com/izavalaibm/Ansible-demo/main/IBM_Page.html -o /var/www/html/ibm_page"
+
     - name: Open port 80 for http access
       firewalld:
         service: http
