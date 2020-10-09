@@ -1,5 +1,5 @@
 ---
-- host: vsphere
+- hosts: vsphere
   tasks:
 
     - name: "Download Web Page"
